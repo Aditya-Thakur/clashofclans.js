@@ -169,8 +169,8 @@ export class Client extends EventEmitter {
 		if (args.round && args.round in CWL_ROUNDS) {
 			return wars.find((war) => war.clan.tag === args.clanTag && war.state === state) ?? null;
 		}
-
-			return wars.find((war) => war.clan.tag === args.clanTag && war.state === state) ?? wars.find((war) => war.clan.tag === args.clanTag) ?? null;
+	
+		return wars.find((war) => war.clan.tag === args.clanTag && war.state === state) ?? wars.find((war) => war.clan.tag === args.clanTag) ?? null;
     }
 
 	/** Returns active wars (last 2) of the CWL group. */
